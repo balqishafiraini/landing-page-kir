@@ -5,6 +5,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
   </head>
   <body>
     <!-- Navbar -->
@@ -16,10 +17,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav m-auto">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#section-2">Product</a>
+            <a class="nav-link" aria-current="page" href="#jumbotron">Home</a>
+            <a class="nav-link" href="#product">Product</a>
             <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#komposisi">Komposisi</a>
           </div>
         </div>
       </div>
@@ -27,7 +28,7 @@
     <!-- Akhir Navbar -->
 
     <!-- Jumbotron -->
-    <div class="jumbotron jumbotron-fluid d-flex align-items-center">
+    <div class="jumbotron jumbotron-fluid d-flex align-items-center" id="jumbotron">
       <div class="container d-flex flex-column justify-content-center align-items-center">
         <div class="img d-flex align-items-center justify-content-center">
           <img src="images/pisang.png" alt="" />
@@ -37,7 +38,7 @@
     </div>
     <!-- Akhir Jumbotron -->
 
-    <section id="section-2">
+    <section id="product">
       <div class="wave"><img src="images/wave.svg" alt="" /></div>
       <div class="container d-flex align-items-center justify-content-center">
         <div class="row justify-content-center align-items-center">
@@ -61,6 +62,58 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="section-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box d-flex flex-column align-self-stretch">
+              <h3 class="text-center">Latar Belakang</h3>
+              <p>
+                Lampung merupakan salah satu provinsi penghasil komoditas pisang terbesar. Produksi pisang di Indonesia pada tahun 2011 mencapai 6.189.052 ton, sedangkan jumlah kulit pisang mencapai 2.063.017 ton/tahun. Kulit pisang kerap
+                kali terbuang. Padahal, kulit pisang dapat diolah kembali menjadi hal yang bermanfaat, salah satunya adalah sebagai bahan pembuatan pasta gigi yang pastinya lebih aman karena merupakanbahan alami.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box d-flex flex-column align-self-stretch">
+              <h3 class="text-center">Trivial</h3>
+              <p>
+                Bahan kimia yang digunakan pada pasta gigi pada umumnya memiliki resiko berbahaya bagi tubuh. Seperti Diethanolamine yang dapat meningkatkan resiko ginjal dan hati, Propylene glycol yang memungkinkan timbul penyakit otak,
+                Sakarin yang dapat memicu diabetes dan kanker kandung kemih, Polyethylene yang dapat menjadi penyeba penyakit radang dan gusi, serta Triclosan yang berpengaruh pada lingkungan.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box d-flex flex-column align-self-stretch">
+              <h3 class="text-center">Latar Belakang</h3>
+              <p>
+                Lampung merupakan salah satu provinsi penghasil komoditas pisang terbesar. Produksi pisang di Indonesia pada tahun 2011 mencapai 6.189.052 ton, sedangkan jumlah kulit pisang mencapai 2.063.017 ton/tahun. Kulit pisang kerap
+                kali terbuang. Padahal, kulit pisang dapat diolah kembali menjadi hal yang bermanfaat, salah satunya adalah sebagai bahan pembuatan pasta gigi yang pastinya lebih aman karena merupakanbahan alami.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="komposisi">
+      <div class="wave"><img src="images/wave2.svg" alt="" /></div>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/pisang1.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/pisang2.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/pisang3.jpg" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+      </div>
+      <div class="wrapper"></div>
     </section>
 
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
