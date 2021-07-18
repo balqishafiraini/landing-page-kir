@@ -10,6 +10,10 @@ body {
   /* box-shadow: 0 0.1px 2px 0.1px #000; */
 }
 
+.navbar .navbar-nav a {
+  font-weight: bold;
+}
+
 .navbar .navbar-nav a:hover {
   color: white;
 }
@@ -27,6 +31,18 @@ body {
   padding: 60px 0;
   text-align: center;
   position: relative;
+  z-index: -2;
+}
+
+.jumbotron::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, rgba(255, 201, 5, 1), rgba(0, 0, 0, 0));
+  z-index: -1;
 }
 
 .jumbotron .img {
@@ -54,6 +70,27 @@ body {
   color: white;
   margin-top: 20px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron .story-text {
+  position: absolute;
+  bottom: 33px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.jumbotron .story-text a {
+  text-decoration: none;
+  color: white;
+  font-family: Open Sans, sans-serif;
+}
+
+.jumbotron .arrow {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #product {
@@ -109,18 +146,18 @@ body {
   font-weight: bold;
 }
 
-#section-3 {
+#about {
   width: 100%;
   height: auto;
   background-color: #ffc905;
   position: relative;
 }
 
-#section-3 .container {
-  padding: 50px 20px;
+#about .container {
+  padding: 100px 20px 50px;
 }
 
-#section-3 .box {
+#about .box {
   border-radius: 10px;
   background-color: #fffb05;
   padding: 20px;
@@ -128,19 +165,20 @@ body {
   font-family: Open Sans, sans-serif;
   box-shadow: 0 0.1px 6px 0.5px #f16508;
   margin-top: 2px;
+  margin-bottom: 20px;
 }
 
-#section-3 .box:hover {
+#about .box:hover {
   border-bottom: 4px solid #f16508;
   margin-top: -2px;
 }
 
-#section-3 .box h3 {
+#about .box h3 {
   font-weight: bold;
   font-size: x-large;
 }
 
-#section-3 .box p {
+#about .box p {
   font-size: 14px;
   text-align: justify;
 }
@@ -149,31 +187,218 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
+  background-color: white;
+  z-index: -2;
 }
 
 #komposisi .wave {
   width: 100%;
   position: absolute;
   top: 0;
-  z-index: 2;
+  z-index: -1;
   margin-top: -1px;
 }
 
-#komposisi .carousel {
+#komposisi .bg {
+  width: 100%;
+  height: 100%;
+}
+
+#komposisi .bg .carousel {
   width: 100%;
 }
 
-#komposisi .carousel .carousel-inner {
+#komposisi .bg .carousel .carousel-inner {
   width: 100%;
 }
 
-#komposisi .carousel .carousel-item {
+#komposisi .carousel .carousel-item img {
   width: 100%;
-  height: 100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  height: 100%;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+/* ...................................... */
+.bg .carousel {
+  z-index: -99;
+} /* keeps this behind all content */
+.bg .carousel .carousel-item {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.bg .carousel .one {
+  background: url(../images/pisang1.jpg);
   background-size: cover;
+  -moz-background-size: cover;
+}
+.bg .carousel .two {
+  background: url(../images/pisang2.jpg);
+  background-size: cover;
+  -moz-background-size: cover;
+}
+.bg .carousel .three {
+  background: url(../images/pisang3.jpg);
+  background-size: cover;
+  -moz-background-size: cover;
+}
+.bg .carousel .active.left {
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+}
+
+/* ...................................... */
+#komposisi .wrapper {
+  position: absolute;
+  /* background-color: black; */
+  padding: 50px 20px 0;
+  height: auto;
+  width: 100%;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* transform: translateY(-50%); */
+}
+
+#komposisi .carousel-wrapper {
+  height: 400px;
+  position: relative;
+}
+
+#komposisi .carousel-wrapper .box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 10px;
+  box-shadow: 0 0.1px 6px 0.5px #f16508;
+}
+
+#komposisi .wrapper .carousel {
+  /* width: 50%; */
+  height: 100%;
+}
+
+#komposisi .wrapper .carousel .carousel-inner.dua {
+  height: 100%;
+  font-family: Open Sans, sans-serif;
+}
+
+#komposisi .wrapper .carousel .carousel-item {
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+
+#komposisi .wrapper .carousel .carousel-inner.dua h1 {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  margin-top: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+#komposisi .wrapper .carousel .carousel-inner.dua .carousel-box {
+  width: 250px;
+  height: auto;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#komposisi .wrapper .carousel .carousel-inner.dua .carousel-box img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+#komposisi .wrapper .carousel .carousel-item .carousel-caption {
+  bottom: 0px;
+  color: black;
+}
+
+#komposisi .wrapper .carousel .carousel-item h5 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#komposisi .wrapper .carousel .carousel-item p {
+  font-size: 12px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* .carousel .carousel-item {
+  height: 300px;
+}
+
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 300px;
+} */
+
+/*Contact*/
+
+#kontak {
+  padding: 0px 20px 50px;
+}
+
+#kontak .title {
+  margin-bottom: 20px;
+}
+
+#kontak h1 {
+  color: black;
+}
+
+#kontak .wrapper {
+  background-color: #ffc905;
+  color: white;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+#kontak .form input,
+textarea {
+  width: 100%;
+}
+
+#kontak .form p {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+#kontak .form.satu p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+#kontak .button button {
+  color: white;
 }
 
 /* DESKTOP */
@@ -217,5 +442,9 @@ body {
   #product .container .text {
     text-align: left;
     padding: 20px 40px 20px 0;
+  }
+
+  #komposisi .wrapper .carousel .carousel-inner.dua .carousel-box {
+    width: 300px;
   }
 }
