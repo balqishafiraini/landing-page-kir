@@ -99,6 +99,7 @@ body {
   background-color: #ffc905;
   position: relative;
   z-index: -2;
+  padding: 50px 0;
 }
 
 #product .container {
@@ -135,6 +136,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   text-align: center;
+  padding: 0;
 }
 
 #product .container .text h1 {
@@ -151,6 +153,7 @@ body {
   height: auto;
   background-color: #ffc905;
   position: relative;
+  margin-top: -1px;
 }
 
 #about .container {
@@ -185,7 +188,7 @@ body {
 
 #komposisi {
   width: 100%;
-  height: 100vh;
+  height: 600px;
   position: relative;
   background-color: white;
   z-index: -2;
@@ -430,7 +433,7 @@ textarea {
   }
 
   #product {
-    height: 100vh;
+    height: auto;
   }
 
   #product .container {
